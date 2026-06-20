@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — Browser Health Dashboard</title>
+<style>
+  :root { --green:#0e8a6e; --dark:#1c2b2a; --grey:#5a6b67; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--dark); line-height: 1.6; background: #f6f8f8;
+  }
+  header {
+    background: var(--green); color: #fff; padding: 28px 20px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+  header .wrap { display: flex; align-items: center; gap: 12px; }
+  header h1 { font-size: 22px; margin: 0; }
+  header .eff { font-size: 13px; opacity: .85; margin-top: 2px; }
+  main { background: #fff; max-width: 760px; margin: 24px auto; padding: 8px 32px 32px;
+         border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  h2 { color: var(--green); font-size: 18px; margin-top: 30px; }
+  h3 { font-size: 15px; margin-top: 22px; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  code { background: #eef2f1; padding: 1px 5px; border-radius: 4px; font-size: 90%; }
+  a { color: var(--green); }
+  .lead { background: #eef7f4; border-left: 4px solid var(--green); padding: 12px 16px; border-radius: 6px; }
+  footer { text-align: center; color: var(--grey); font-size: 13px; padding: 16px 20px 40px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div style="font-size:30px">🩺</div>
+    <div>
+      <h1>Privacy Policy — Browser Health Dashboard</h1>
+      <div class="eff">Effective date: 20 June 2026</div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <p class="lead"><strong>Short version:</strong> Your browsing data stays on your
+  device. Tab info, settings, the health-score history, saved sessions, and your
+  block list are stored locally in your browser. We do not have a server that
+  receives them, and we never sell or share them. Data leaves your device only when
+  you run a speed test or choose to subscribe to Pro — both explained below.</p>
+
+  <h2>What the extension stores locally (on your device only)</h2>
+  <ul>
+    <li>Open-tab counts/titles/URLs used to show stats and find tabs (read live, not sent anywhere).</li>
+    <li>System RAM/CPU samples used for the gauges, badge, and history graph.</li>
+    <li>Per-tab last-active timestamps used for "stale tab" detection and auto-suspend.</li>
+    <li>Your settings (auto-suspend preferences, scheduled speed test).</li>
+    <li>Saved sessions you create.</li>
+    <li>Your site block list.</li>
+  </ul>
+  <p>This information is kept in <code>chrome.storage</code> on your computer. It is
+  not transmitted to us and there is no account or cloud sync.</p>
+
+  <h2>When data leaves your device</h2>
+  <h3>1. Internet speed test</h3>
+  <p>When you run a speed test (or, on Pro, when a scheduled test runs), the
+  extension downloads/uploads test data to Cloudflare's public speed-test endpoint
+  (<code>speed.cloudflare.com</code>). As with any web request, Cloudflare receives
+  your IP address and connection metadata. We do not receive or store the results on
+  any server — they are shown to you and kept locally. See Cloudflare's privacy
+  policy for how they handle requests.</p>
+  <h3>2. Pro subscription (optional)</h3>
+  <p>Payments are handled by <strong>ExtensionPay</strong> and <strong>Stripe</strong>.
+  If you subscribe, you provide your email and payment details directly to them; we
+  never see or store your card information. ExtensionPay stores your email and
+  subscription status so the extension can verify whether Pro is active. See
+  ExtensionPay's and Stripe's privacy policies for details.</p>
+
+  <h2>What we do NOT do</h2>
+  <ul>
+    <li>We do <strong>not</strong> collect or transmit your browsing history. (The extension does not request the browsing-history permission.)</li>
+    <li>We do <strong>not</strong> use analytics or tracking SDKs.</li>
+    <li>We do <strong>not</strong> sell, rent, or share your data with advertisers.</li>
+    <li>We do <strong>not</strong> run a server that receives your tabs, usage, or block list.</li>
+  </ul>
+
+  <h2>Site blocking</h2>
+  <p>The block list you create is used only to block those sites in your own browser,
+  via Chrome's declarativeNetRequest API. The list stays on your device.</p>
+
+  <h2>Permissions and why they're used</h2>
+  <ul>
+    <li><code>tabs</code> / <code>tabGroups</code> — tab stats, search, duplicate/stale detection, auto-suspend.</li>
+    <li><code>system.cpu</code> / <code>system.memory</code> — show RAM/CPU usage and the health score.</li>
+    <li><code>storage</code> — save your settings, history, sessions, and block list locally.</li>
+    <li><code>alarms</code> — periodically sample system stats and run scheduled speed tests.</li>
+    <li><code>declarativeNetRequest</code> — block the sites on your block list.</li>
+    <li>Host access to <code>speed.cloudflare.com</code> — run the speed test.</li>
+    <li>Host access to <code>extensionpay.com</code> — verify your Pro subscription status.</li>
+  </ul>
+
+  <h2>Data retention &amp; deletion</h2>
+  <p>All local data lives in your browser. Removing the extension deletes it. You can
+  also clear individual items in the popup (remove sessions, unblock sites, etc.). To
+  delete your ExtensionPay subscription data, cancel your subscription and contact
+  ExtensionPay.</p>
+
+  <h2>Children</h2>
+  <p>The extension is not directed to children under 13.</p>
+
+  <h2>Changes</h2>
+  <p>We may update this policy; the "Effective date" above will change accordingly.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy? Contact: <a href="mailto:atanas_sd@abv.bg">atanas_sd@abv.bg</a></p>
+</main>
+
+<footer>Browser Health Dashboard · Privacy Policy</footer>
+</body>
+</html>
